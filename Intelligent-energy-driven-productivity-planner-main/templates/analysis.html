@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Analysis</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        EnergyPlanner.ai
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+        <li><a href="/insights">Productivity Insights</a></li>
+
+        <li><a href="/analysis">AI Analysis</a></li>
+
+        <li><a href="/workflow">Workflow</a></li>
+
+        <li><a href="/about">About</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="section">
+
+    <h1 class="section-title">
+        AI Productivity Analysis
+    </h1>
+
+    <div class="analysis-container">
+
+        <div class="input-grid">
+
+            <input
+            type="number"
+            id="sleep"
+            placeholder="Sleep Hours">
+
+            <input
+            type="number"
+            id="stress"
+            placeholder="Stress Level (1-5)">
+
+            <input
+            type="number"
+            id="work_hours"
+            placeholder="Work/Study Hours">
+
+            <input
+            type="number"
+            id="mood"
+            placeholder="Mood Level (1-5)">
+
+        </div>
+
+        <br><br>
+
+        <button
+        class="primary-btn"
+        onclick="analyzeProductivity()">
+
+            Analyze Productivity
+
+        </button>
+
+        <div id="results"></div>
+
+    </div>
+
+</section>
+
+<script
+src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+</html>
